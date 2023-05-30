@@ -15,5 +15,4 @@ public class Radio implements RemoCon {
 	public void internet() {
 		System.out.println("인터넷 연결 불가");
 	}
-
 }

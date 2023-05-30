@@ -1,14 +1,25 @@
 package kr.poly;
 
 public class TV implements RemoCon {
+	int currCH = 70;
 	@Override
 	public void chUp() {
-		System.out.println("TV 채널 올림");
+		if (currCH < RemoCon.MAXCH) { 
+			currCH++;
+			System.out.println("TV 채널 올림 : " + currCH);
+		} else {
+			currCH = 1;
+		}
 	}
 
 	@Override
 	public void chDown() {
-		System.out.println("TV 채널 올림");
+		if (currCH > RemoCon.MINCH) {
+			currCH--;
+			System.out.println("TV 채널 내림 : " + currCH);
+		} else {
+			currCH = 100;
+		}
 	}
 
 	@Override
